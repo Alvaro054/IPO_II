@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AprendeYEnseña | Tu Comunidad de Tutorías</title>
+    <style>
+        /* Paleta de colores Dark Mode / Neón */
+        :root {
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-purple: #8b5cf6;
+            --accent-teal: #14b8a6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* Cabecera minimalista */
+        header {
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text-main);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--accent-teal);
+        }
+
+        /* Sección Hero (Dividida) */
+        .hero-split {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 5rem 5%;
+            min-height: 80vh;
+            gap: 3rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .hero-content {
+            flex: 1;
+            max-width: 600px;
+        }
+
+        .tagline {
+            color: var(--accent-purple);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+        }
+
+        .btn-gradient {
+            background: linear-gradient(135deg, var(--accent-purple), var(--accent-teal));
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: opacity 0.3s, transform 0.2s;
+            display: inline-block;
+            border: none;
+        }
+
+        .btn-gradient:hover {
+            opacity: 0.9;
+            transform: scale(1.05);
+        }
+
+        /* Mockup Visual (Representación de Teams) */
+        .hero-visual {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .mockup-box {
+            background: var(--bg-card);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 2rem;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            position: relative;
+        }
+
+        .mockup-box::before {
+            content: "Microsoft Teams";
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background: var(--bg-dark);
+            padding: 0 10px;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+        }
+
+        .mockup-message {
+            background: rgba(255,255,255,0.05);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            border-left: 3px solid var(--accent-purple);
+        }
+
+        /* Sección de Pasos */
+        .steps-section {
+            padding: 5rem 5%;
+            background-color: var(--bg-card);
+        }
+
+        .steps-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+            font-size: 2.2rem;
+        }
+
+        .step-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 3rem;
+            gap: 2rem;
+        }
+
+        .step-number {
+            font-size: 4rem;
+            font-weight: 900;
+            color: transparent;
+            -webkit-text-stroke: 2px var(--accent-teal);
+            opacity: 0.5;
+            min-width: 80px;
+        }
+
+        .step-text h3 {
+            font-size: 1.5rem;
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+        }
+
+        .step-text p {
+            color: var(--text-muted);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-split {
+                flex-direction: column;
+                text-align: center;
+                padding-top: 3rem;
+            }
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            .step-row {
+                flex-direction: column;
+                text-align: center;
+            }
+            .step-number {
+                -webkit-text-stroke: 2px var(--accent-purple);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">Aprende<span>Y</span>Enseña</a>
+        <a href="#" class="btn-gradient" style="padding: 0.5rem 1.5rem; font-size: 0.9rem;">Acceder</a>
+    </header>
+
+    <section class="hero-split">
+        <div class="hero-content">
+            <span class="tagline">MVP Exclusivo para Ingeniería Informática</span>
+            <h1>Aprende. Enseña.<br>Ahorra para tus optativas.</h1>
+            <p>Conecta con compañeros de tu facultad. Si enseñas, ganas dinero extra. Si aprendes, una parte de tu pago se convierte en créditos para tus asignaturas de 4º curso.</p>
+            <a href="form.html" class="btn-gradient">Acceso a la plataforma</a>
+        </div>
+        
+        <div class="hero-visual">
+            <div class="mockup-box">
+                <div class="mockup-message" style="border-left-color: var(--accent-teal);">
+                    <strong>Ana (3º Curso)</strong><br>
+                    <span style="color: var(--text-muted); font-size: 0.9rem;">Ofrezco clase de Estructura de Datos. Jueves 17:00h.</span>
+                </div>
+                <div class="mockup-message">
+                    <strong>Carlos (2º Curso)</strong><br>
+                    <span style="color: var(--text-muted); font-size: 0.9rem;">¡Me apunto! Te hago el Bizum fraccionado.</span>
+                </div>
+                <div class="mockup-message" style="border-left-color: #f59e0b; opacity: 0.8;">
+                    <strong>🤖 Bot AprendeYEnseña</strong><br>
+                    <span style="color: var(--text-muted); font-size: 0.9rem;">Carlos, se han añadido 2€ a tu Fondo de Ahorro Académico.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="steps-section">
+        <div class="steps-container">
+            <h2 class="section-title">¿Cómo funciona el modelo híbrido?</h2>
+            
+            <div class="step-row">
+                <div class="step-number">1</div>
+                <div class="step-text">
+                    <h3>Únete a nuestro Teams</h3>
+                    <p>Utiliza tu cuenta universitaria oficial para acceder al espacio de "AprendeYEnseña". Sin registros complicados ni aplicaciones de terceros.</p>
+                </div>
+            </div>
+
+            <div class="step-row">
+                <div class="step-number">2</div>
+                <div class="step-text">
+                    <h3>Pide u ofrece clases</h3>
+                    <p>Navega por los canales de las asignaturas. Los tutores publican su disponibilidad y los alumnos solicitan las clases directamente respondiendo a los mensajes.</p>
+                </div>
+            </div>
+
+            <div class="step-row">
+                <div class="step-number">3</div>
+                <div class="step-text">
+                    <h3>Gana dinero y acumula créditos</h3>
+                    <p>El pago de la clase se fracciona: la mayor parte va directa al tutor para que gane dinero inmediato, y el sobrante va a tu "Fondo de Ahorro Académico" para pagar los créditos de tus asignaturas optativas.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>
